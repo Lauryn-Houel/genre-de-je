@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversation - @moka_cosplay</title>
+    <link rel="stylesheet" href="mokacosplay.css">
+</head>
+<body>
+    <div class="iphone-screen">
+        <!-- Barre de statut -->
+        <div class="status-bar">
+            <span class="time">12:34</span>
+            <span class="battery">🔋 100%</span>
+        </div>
+
+        <!-- En-tête de la conversation -->
+        <div class="conversation-header">
+            <a href="messages.html" class="back-arrow">&#8592;</a> 
+            <div class="profile-picture"></div>
+            <div class="contact-name">@moka_cosplay</div>
+        </div>
+
+        <!-- Messages -->
+        <div class="messages">
+            <!-- Message de l'utilisateur -->
+            <div class="message user-message">
+                <div class="message-text">Est-ce que pour toi le cosplay, ce n’est que du loisir ? </div>
+            </div>
+
+            <!-- Message de Maman -->
+            <div class="message mama-message">
+                <div class="message-text">Question complexe j’avoue. Je le vois surtout en tant que loisir pour l’instant, surtout pour m’évader du quotidien. J’aime le cosplay “fantaisie” qui s’inspire de loin de la pop culture mais qui me fait voir des choses que je verrais pas dans la vie hors convention
+</div>
+            </div>
+
+            <!-- Message de l'utilisateur -->
+            <div class="message user-message">
+                <div class="message-text">Le cosplay comme espace exutoire, alors ? 
+</div>
+            </div>
+
+ <div class="message mama-message">
+                <div class="message-text">Oui tout à fait et puis le cosplay permet de libérer ses démons. Etant donné qu’il n’y a pas de jugement, tout est possible.
+</div>
+            </div>
+
+ <div class="message user-message">
+                <div class="message-text">C’est assez ironique que tu dises qu’il n’y a pas de jugement alors que t’as déjà été plusieurs fois juge dans des conventions non ? Comment ça se passe pour que tu arrives à garder cette mentalité de ”no judgment”.
+</div>
+            </div>
+
+            <div class="message mama-message">
+                <div class="message-text"> Oui j’ai déjà été juré c’est vrai aha ! En fait, on a des grilles pour nous aiguiller. On évalue en deux parties : la partie costume puis la partie prestation. Il y a aussi certains concours où on a la possibilité d’être jugé que sur l’un ou sur l’autre. </div></div>
+
+                <div class="message user-message">
+                <div class="message-text">Tu peux m’en dire un peu plus sur ces grilles ?</div>
+            </div>
+
+            <div class="message mama-message">
+                <div class="message-text">Oui bien sûr. Ce qu’on retrouve souvent pour la partie costume : la ressemblance à l’image de référence, les choix des matériaux, les techniques utilisées, la construction, si c’est bien fait et propre. Et concernant la prestation : le rapport à l'œuvre de base, la qualité du roleplay, la compréhension de la prestation… 
+</div></div>
+
+  <div class="message user-message">
+                <div class="message-text">Ça parait un peu limité d’un point de vue extérieur. Et du coup il existe des conventions où on peut se détacher de ces règles et justement partir de l’imaginaire? </div>
+            </div>
+
+            <div class="message mama-message">
+                <div class="message-text">Je ne crois pas qu’il en existe des officielles, mais des officieuses bien sûr. Et malgré que je sois jury de convention “officielle”, c’est celles-ci qui m’intéressent le plus. Les gens s’éclatent, testent de nouvelles esthétiques, de nouvelles techniques et <strong><a href="ELDORADO.html">ils plongent la tête la première dans la fantaisie et c’est magique. </a></strong>
+</div></div>
+                 </div>
+
+        <!-- Champ pour envoyer un message (sans le bouton) -->
+        <div class="message-input">
+            <input type="text" placeholder="Tapez un message..." class="input-text">
+        </div>
+
+          <!-- Bouton Home -->
+        <div class="screen-bottom">
+    <a href="GDJ.html" class="home-button-link">
+        <div class="home-button"></div>
+    </a>
+</div>
+    </div>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let messages = document.querySelectorAll('.message');
+        let delay = 0;
+        let timer;
+        
+        function showMessages() {
+            messages.forEach((message) => {
+                message.classList.add('show');
+            });
+            clearInterval(timer); // Stop the timer
+        }
+
+        // Fonction pour afficher un message toutes les 3 secondes
+        function startMessageDisplay() {
+            let index = 0;
+
+            timer = setInterval(() => {
+                if (index < messages.length) {
+                    messages[index].classList.add('show');
+                    index++;
+                } else {
+                    clearInterval(timer); // Arrête une fois tous les messages affichés
+                }
+            }, 2000);
+        }
+
+        // Commencer l'affichage automatique
+        startMessageDisplay();
+
+        // Permettre d'afficher immédiatement les messages restants au clic
+        document.body.addEventListener('click', showMessages);
+    });
+</script>
+
+</body>
+</html>

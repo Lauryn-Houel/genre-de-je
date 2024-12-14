@@ -1,0 +1,188 @@
+/* Style général */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #f58529, #dd2a7b, #8134af); /* Dégradé rose et violet */
+    font-family: Arial, sans-serif;
+}
+
+/* Conteneur de l'écran iPhone */
+.iphone-screen {
+    width: 375px; /* Largeur de l'iPhone plus réaliste */
+    height: 750px; /* Hauteur d'un écran d'iPhone X */
+    border-radius: 60px; /* Coins arrondis prononcés */
+    border: 10px solid #e2e3f1; /* Bordure douce */
+    background-color: #d8d9e3; /* Fond blanc pour l'écran */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Aligner les éléments au haut de l'écran */
+    position: relative;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4); /* Ombre douce pour un effet de profondeur */
+}
+
+/* Barre de statut (heure et batterie) */
+.status-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    color: black; /* Texte noir pour l'heure et la batterie */
+    font-size: 15px;
+    font-weight: normal;
+}
+
+/* En-tête de la conversation */
+.conversation-header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    position: relative;
+}
+
+/* Flèche de retour style iPhone */
+.back-arrow {
+    font-size: 22px;
+    color: #7a7a7a; /* Couleur gris clair typique de l'iPhone */
+    cursor: pointer;
+    margin-right: 10px;
+    font-weight: bold;
+    padding: 8px;
+    border-radius: 50%; /* Pour un effet de bouton circulaire */
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+.back-arrow:hover {
+    background-color: #f0f0f0; /* Fond clair au survol */
+    transform: scale(1.1); /* Légère augmentation au survol */
+}
+
+/* Style de la photo de profil */
+.profile-picture {
+    width: 40px;
+    height: 40px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.contact-name {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Messages */
+.messages {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Style des messages */
+.message {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    max-width: 70%;
+    opacity: 0; /* Cacher les messages au départ */
+    transition: opacity 0s ease, transform 0s ease; /* Retirer les transitions */
+}
+
+/* Classe qui rend les messages visibles */
+.message.show {
+    opacity: 1; /* Rendre le message visible immédiatement */
+}
+
+/* Style pour le message de l'utilisateur (bulle bleue) */
+.user-message {
+    align-self: flex-end;
+    background-color: #007bff; /* Bleu pour l'utilisateur */
+    color: white;
+    border-radius: 20px;
+    padding: 10px;
+    margin-left: 30px;
+}
+
+/* Style pour le message de Maman (bulle grise) */
+.mama-message {
+    align-self: flex-start;
+    background-color: #f1f0f0; /* Gris pour Maman */
+    color: black;
+    border-radius: 20px;
+    padding: 10px;
+    margin-right: 30px;
+}
+
+.message-text {
+    font-size: 13px; /* Taille réduite pour les bulles */
+    line-height: 1.4;
+}
+
+/* Champ de saisie (sans bouton) */
+.message-input {
+    display: flex;
+    padding: 10px;
+    background-color: #e0e0e0;
+    border-top: 2px solid #ddd;
+    align-items: center;
+    position: relative;
+}
+
+.input-text {
+    width: 100%; /* Le champ prend toute la largeur */
+    padding: 10px;
+    border-radius: 25px;
+    border: none;
+    font-size: 12px;
+    outline: none;
+}
+
+/* Section inférieure avec bouton Home */
+.screen-bottom {
+    height: 130px; /* Hauteur pour simuler un contour au-dessus du bouton */
+    background: rgba(255, 255, 255, 0.1); /* Fond légèrement transparent */
+    border-top: 5px solid rgba(255, 255, 255, 0.3); /* Ligne de séparation en haut */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.home-button {
+    width: 80px; /* Taille du bouton Home */
+    height: 80px;
+    background-color: rgba(255, 255, 255, 0.5); /* Couleur de fond du bouton Home */
+    border: 2px solid #e2e3f1;
+    border-radius: 50%; /* Forme circulaire du bouton Home */
+    margin: 20px auto;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.home-button:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    transform: scale(1.1);
+}
+
+/* Encoche de l'écran */
+.iphone-screen::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 30px;
+    background: #555;
+    border-radius: 0 0 15px 15px;
+}
+
+a { /* Supprimer le soulignement par défaut des liens */
+    color: inherit; /* Hériter de la couleur du texte parent */
+        text-decoration: none;
+}
+

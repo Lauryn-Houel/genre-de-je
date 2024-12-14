@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversation - @aori_officiel</title>
+    <link rel="stylesheet" href="aoriofficiel.css">
+</head>
+<body>
+    <div class="iphone-screen">
+        <!-- Barre de statut -->
+        <div class="status-bar">
+            <span class="time">12:34</span>
+            <span class="battery">🔋 100%</span>
+        </div>
+
+        <!-- En-tête de la conversation -->
+        <div class="conversation-header">
+           <a href="messages.html" class="back-arrow">&#8592;</a> 
+            <div class="profile-picture"></div>
+            <div class="contact-name">@aori_officiel</div>
+        </div>
+
+        <!-- Messages -->
+        <div class="messages">
+            <!-- Message de l'utilisateur -->
+            <div class="message user-message">
+                <div class="message-text">Tout d'abord, comment s’est faite ta rencontre avec le chant ? Est-ce que ça a été simultané par le cosplay ? Et comment as-tu décidé d’intégrer l’un à l’autre ?</div>
+            </div>
+
+            <!-- Message de Maman -->
+            <div class="message mama-message">
+                <div class="message-text">Alors j’ai toujours chanté depuis que je suis toute petite. À la base, je voulais même être chanteuse. Et, de fil en aiguille, j’ai compris que j’aimais autant les BO* que les personnages des séries que je regardais. Et c’est là que je me suis dit : pourquoi pas allier les deux ? Je l’ai fait et ça a marché du feu de Dieu. </div>
+            </div>
+
+            <!-- Message de l'utilisateur -->
+            <div class="message user-message">
+                <div class="message-text">Oui c’est sûr tu t’es créée une vraie communauté et les jurys ont toujours adoré tes interprétations, j’ai l’impression ! Je te vois dans beaucoup d'événements en guest notamment en tant que <em>Alastor</em> de Hazbin Hotel, c’est ton personnage phare?  </div>
+            </div>
+
+ <div class="message mama-message">
+                <div class="message-text">Oui, c’est vrai que je ne pensais pas que ça marcherait à ce point ! Alastor, c’est un peu comme mon alter ego, on se ressemble sur énormément de points. J’ai moi aussi bossé dans le monde de la radio, je chante toujours et j’ai un petit côté démon. aha ! Après je suis vraiment assimilée à lui. Maintenant, quand on pense à Aori, on pense Alastor le plus souvent et je dois avouer que ça m’embête un peu même si j’adore le porter parce qu’à chaque représentation je m’améliore un peu plus. </div>
+            </div>
+
+ <div class="message user-message">
+                <div class="message-text">Oui j’imagine qu’avoir un personnage qui te colle à la peau ça peut être gênant, ça t’empêche d’incarner d’autres personnages dans un sens ? </div>
+            </div>
+
+            <div class="message mama-message">
+                <div class="message-text">Non j’en fais d’autres mais c’est vrai qu’on me book pour que je fasse Alastor. Mais je ne veux pas entrer dans un cercle vicieux, que ce soit “mon” personnage et qu'aucun autre cosplayeur ou cosplayeuse n'ose le faire, ce serait vraiment nul. Après, avoir la possibilité de  l’incarner plusieurs fois me permet de l’améliorer et de le fignoler. Ça, c’est toujours satisfaisant. Un costume n'est jamais fini. </div></div>
+
+            <div class="message user-message">
+                <div class="message-text">À propos d’interprétation : physiquement, tu lui ressembles beaucoup mais tu gardes ton genre et tes attributs dits “féminins”, et surtout ta voix ! Comment les personnes de la communauté l’ont pris ? Les fans ? Le public de Hazbin Hotel ? 
+</div>
+            </div>
+
+             <div class="message mama-message">
+                <div class="message-text">Les premières fois que je suis montée sur scène, j’ai vu des personnes perplexes. Elles se demandaient si j’allais vraiment refaire ses chansons avec ma voix et ma corpulence. Mais au final le public s’y est fait et je dirais même plus il adore ! Le côté “show” que j’offre fait vivre réellement le personnage, et le fait que je sois une femme ou que j’ai une voix plus aigüe ça n’a plus du tout d’importance. <strong><a href="POUSSINCOQ OU POUSSINPOULE.html">Après j’avoue qu’on me mégenrait beaucoup au début. On pensait que j’étais un jeune homme qui  n’avait pas encore mué ou un homme avec une voix aiguë étant donné que je n’ai pas une grosse poitrine, je pense qu’on n’arrivait pas à connaître mon genre.</strong></a> Mais tout ça, je m’en fiche un peu, des fois je me laisse même genrer en “il” !</div></div>
+
+
+                 </div>
+
+        <!-- Champ pour envoyer un message (sans le bouton) -->
+        <div class="message-input">
+            <input type="text" placeholder="Tapez un message..." class="input-text">
+        </div>
+
+          <!-- Bouton Home -->
+        <div class="screen-bottom">
+    <a href="GDJ.html" class="home-button-link">
+        <div class="home-button"></div>
+    </a>
+</div>
+    </div>
+    </div>
+
+   <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let messages = document.querySelectorAll('.message');
+        let delay = 0;
+        let timer;
+        
+        function showMessages() {
+            messages.forEach((message) => {
+                message.classList.add('show');
+            });
+            clearInterval(timer); // Stop the timer
+        }
+
+        // Fonction pour afficher un message toutes les 3 secondes
+        function startMessageDisplay() {
+            let index = 0;
+
+            timer = setInterval(() => {
+                if (index < messages.length) {
+                    messages[index].classList.add('show');
+                    index++;
+                } else {
+                    clearInterval(timer); // Arrête une fois tous les messages affichés
+                }
+            }, 2000);
+        }
+
+        // Commencer l'affichage automatique
+        startMessageDisplay();
+
+        // Permettre d'afficher immédiatement les messages restants au clic
+        document.body.addEventListener('click', showMessages);
+    });
+</script>
+
+</body>
+</html>

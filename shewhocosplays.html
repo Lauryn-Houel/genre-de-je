@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversation - @shewhocosplays</title>
+    <link rel="stylesheet" href="shewhocosplays.css">
+</head>
+<body>
+    <div class="iphone-screen">
+        <!-- Barre de statut -->
+        <div class="status-bar">
+            <span class="time">12:34</span>
+            <span class="battery">🔋 100%</span>
+        </div>
+
+        <!-- En-tête de la conversation -->
+        <div class="conversation-header">
+            <a href="messages.html" class="back-arrow">&#8592;</a> 
+            <div class="profile-picture"></div>
+            <div class="contact-name">@shewhocosplays</div>
+        </div>
+
+        <!-- Messages -->
+        <div class="messages">
+            <!-- Message de l'utilisateur -->
+            <div class="message user-message">
+                <div class="message-text">J’ai vu que tu faisais beaucoup de genderbend. Tu peux m’expliquer un peu ton histoire avec le cosplay et pourquoi et comment tu t’es rapprochée du genderbend en particulier? </div>
+            </div>
+
+            <!-- Message de Maman -->
+            <div class="message mama-message">
+                <div class="message-text">Alors j’ai commencé le cosplay à 21 ans, en 2019, avec des personnages principalement issus de l’univers Marvel puis depuis une paire d’années je touche à l’univers des mangas/animés. Et c’est cet univers qui m’a convaincue que le genderbend est une option. Autrement, ma relation avec le cosplay a été assez compliquée, j’ai reçu pas mal de critiques du genre : “mais untel est un garçon, toi tu l’es pas” ou “mais unetelle est une blanche et toi tu l'es pas”. Comme beaucoup d'autres cosplayeurs et cosplayeuses j’ai été critiquée, il faut juste savoir dire “rien à faire” et continuer de faire ce qui te fait plaisir.</div>
+            </div>
+
+            <!-- Message de l'utilisateur -->
+            <div class="message user-message">
+                <div class="message-text">Quel genderbend as-tu préféré faire ? Duquel es-tu la plus fière ? </div>
+            </div>
+
+ <div class="message mama-message">
+                <div class="message-text">Mon exemple préféré, c'est <em>Doflamingo</em> un personnage masculin de base que j'ai cosplayé en gardant mon genre, j'ai dû un peu plus me débrouiller dans le sens où les cosplays disponibles à l'achat étaient de mauvaise qualité d'une part mais aussi  pour homme donc j'ai cherché des articles qui ressemblaient fort à son style vestimentaire (un grand merci à vinted vraiment) tout en changeant certains aspects : le maquillage plus féminin, la mise en évidence de ma poitrine différente (plutôt que d'avoir la chemise ouverte la mienne est à moitié fermée) j'ai choisi une perruque plus longue mais ça c'était pour accentuer le contraste, autrement je trouve que la longueur des cheveux n'a pas d'influence sur le genre, et pour les talons le personnage en porte déjà donc ça c'était cool. Et même si j'avais peur de le rater parce que c'est un personnage que j'aime beaucoup, j'adore ma version et j'ai reçu beaucoup de commentaires positifs mine de rien sur mes choix. Mais cet accueil n' a pas toujours été aussi positif pour mes autres genderbend. </div>
+            </div>
+
+ <div class="message user-message">
+                <div class="message-text">Des genderbend sont appréciés par d’autres fans de One piece alors ! Et concernant les critiques, elles venaient des gens de la communauté ou c’était des fans, des personnes sur les réseaux sociaux ? </div>
+            </div>
+
+            <div class="message mama-message">
+                <div class="message-text">De toutes parts mais la majorité venait d'autres cosplayeurs. Je me souviens qu'à une convention je parlais de mon cosplay de <em>Taiju</em> de Tokyo Revengers  avec un homme et il m'avait répondu que c'était bizarre, parce que Taiju était un homme donc qu'il devait être cosplayé par un homme  musclé, pour mieux correspondre au personnage originel. Il insistait sur le fait qu'il trouvait ça bizarre et qu'<strong><a href="HOMME PORCELAINE.html">une femme ne pourrait jamais le cosplayer car elle ne serait jamais assez tracée physiquement.</a></strong> Et un <em>Taiju</em> sans muscle ce serait nul. Et quand j’avais essayé d’en parler à d’autres personnes de la convention, il intervenait toujours pour dire que c’était n’importe quoi de la part d’une femme et que pleins d’autres personnages féminins seraient mieux au vu de ma corpulence. J’avoue que j’ai eu du mal à comprendre son raisonnement, parce que pour moi que ce soit du cosplay sans changement de genre, genderbend, crossplay, le cosplay reste du cosplay. Puis un ami est venu prendre ma défense en disant que le genderbend restait du cosplay et que j’étais libre de faire le personnage que je souhaitais. </div></div>
+
+        
+
+
+                 </div>
+
+        <!-- Champ pour envoyer un message (sans le bouton) -->
+        <div class="message-input">
+            <input type="text" placeholder="Tapez un message..." class="input-text">
+        </div>
+
+           <!-- Bouton Home -->
+        <div class="screen-bottom">
+    <a href="GDJ.html" class="home-button-link">
+        <div class="home-button"></div>
+    </a>
+</div>
+
+    </div>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let messages = document.querySelectorAll('.message');
+        let delay = 0;
+        let timer;
+        
+        function showMessages() {
+            messages.forEach((message) => {
+                message.classList.add('show');
+            });
+            clearInterval(timer); // Stop the timer
+        }
+
+        // Fonction pour afficher un message toutes les 3 secondes
+        function startMessageDisplay() {
+            let index = 0;
+
+            timer = setInterval(() => {
+                if (index < messages.length) {
+                    messages[index].classList.add('show');
+                    index++;
+                } else {
+                    clearInterval(timer); // Arrête une fois tous les messages affichés
+                }
+            }, 2000);
+        }
+
+        // Commencer l'affichage automatique
+        startMessageDisplay();
+
+        // Permettre d'afficher immédiatement les messages restants au clic
+        document.body.addEventListener('click', showMessages);
+    });
+</script>
+
+</body>
+</html>

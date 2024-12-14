@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversation - @sunfaaerie</title>
+    <link rel="stylesheet" href="sunfaaerie.css">
+</head>
+<body>
+    <div class="iphone-screen">
+        <!-- Barre de statut -->
+        <div class="status-bar">
+            <span class="time">12:34</span>
+            <span class="battery">🔋 100%</span>
+        </div>
+
+        <!-- En-tête de la conversation -->
+        <div class="conversation-header">
+           <a href="messages.html" class="back-arrow">&#8592;</a>
+            <div class="profile-picture"></div>
+            <div class="contact-name">@sunfaaerie</div>
+        </div>
+
+        <!-- Messages -->
+        <div class="messages">
+            <!-- Message de l'utilisateur -->
+            <div class="message user-message">
+                <div class="message-text">Quelle est ton histoire personnelle avec le cosplay ? Comment as-tu commencé ?  Ta pratique a-t-elle évolué avec les années et ton âge? </div>
+            </div>
+
+            <!-- Message de Maman -->
+            <div class="message mama-message">
+                <div class="message-text">J'ai commencé en 2018, en suivant une amie qui en faisait depuis quelque temps, j'ai toujours eu un rapport très dépendant à la pop culture et un goût prononcé pour les activités créatives et le théâtre, c'était donc le hobby parfait ! Cependant, ce n'est que pour le fun et oui ma position a évolué car mon corps, mon temps et mes moyens ne suivent pas forcément mes rêves !  </div>
+            </div>
+
+            <!-- Message de l'utilisateur -->
+            <div class="message user-message">
+                <div class="message-text">T’as déjà fait du crossplay ou du genderbend ?  </div>
+            </div>
+
+ <div class="message mama-message">
+                <div class="message-text">Oui, je fais beaucoup de crossplay surtout, j’adore ça ! Et il y a beaucoup de personnes dans la communauté qui ont un physique androgyne et donc en profitent, ça montre encore mieux nos talents de transformation et d’acting ! Pareil pour le genderbend, ça révèle d’une grande créativité ! </div>
+            </div>
+
+ <div class="message user-message">
+                <div class="message-text">Est-ce que tu oublies complètement ta personnalité quand tu cosplay ?</div>
+            </div>
+
+            <div class="message mama-message">
+                <div class="message-text">Ma personnalité est miroir, cependant même si je m’adapte bien et essaye de faire le meilleur roleplay*, quand je genderbend <em>Duke Nukem</em> je peux être courageuse et beauf mais <strong><a href="USURPA-QUEER.html">j’aime sortir du personnage et faire des bêtises, être hyperactive, mettre le personnage dans des situations qui n’arriveront pas dans la fiction, ça m’amuse ! </strong></a></div>
+            </div>
+
+            <div class="message user-message">
+                <div class="message-text">Aha excellent cette revisite ! Et les autres fans comment ils le voient? 
+</div>
+            </div>
+
+             <div class="message mama-message">
+                <div class="message-text">Ils en rigolent et ça les perturbe à la fois ! Link en femme déjà et qui crie, ils ont l’impression que c’est un nouveau personnage mais qu’ils le connaissent en même temps. </div>
+            </div>
+  <div class="message user-message">
+                <div class="message-text">Tu as choisi ce personnage pour une raison particulière ? 
+</div>
+            </div>
+
+            <div class="message mama-message">
+                <div class="message-text">Oui, parce que c’est un personnage qui me rebute particulièrement et il est assez problématique. La sur-sexualisation m’énerve tout simplement car en tant que personne aro-ace, je ne comprends pas la culture du sexe !  </div>
+            </div>
+
+
+
+        </div>
+
+        <!-- Champ pour envoyer un message (sans le bouton) -->
+        <div class="message-input">
+            <input type="text" placeholder="Tapez un message..." class="input-text">
+        </div>
+
+          <!-- Bouton Home -->
+        <div class="screen-bottom">
+    <a href="GDJ.html" class="home-button-link">
+        <div class="home-button"></div>
+    </a>
+</div>
+    
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let messages = document.querySelectorAll('.message');
+        let delay = 0;
+        let timer;
+        
+        function showMessages() {
+            messages.forEach((message) => {
+                message.classList.add('show');
+            });
+            clearInterval(timer); // Stop the timer
+        }
+
+        // Fonction pour afficher un message toutes les 3 secondes
+        function startMessageDisplay() {
+            let index = 0;
+
+            timer = setInterval(() => {
+                if (index < messages.length) {
+                    messages[index].classList.add('show');
+                    index++;
+                } else {
+                    clearInterval(timer); // Arrête une fois tous les messages affichés
+                }
+            }, 2000);
+        }
+
+        // Commencer l'affichage automatique
+        startMessageDisplay();
+
+        // Permettre d'afficher immédiatement les messages restants au clic
+        document.body.addEventListener('click', showMessages);
+    });
+</script>
+
+</body>
+</html>

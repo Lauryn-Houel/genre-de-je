@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversation - Maman</title>
+    <link rel="stylesheet" href="maman.css">
+</head>
+<body>
+    <div class="iphone-screen">
+        <!-- Barre de statut -->
+        <div class="status-bar">
+            <span class="time">12:34</span>
+            <span class="battery">🔋 100%</span>
+        </div>
+
+        <!-- En-tête de la conversation -->
+        <div class="conversation-header">
+    <a href="messages.html" class="back-arrow">&#8592;</a> <!-- Flèche de retour -->
+    <div class="profile-picture"></div>
+    <div class="contact-name">Maman</div>
+</div>
+
+        <!-- Messages -->
+        <div class="messages">
+            <!-- Message de l'utilisateur -->
+            <div class="message user-message">
+                <div class="message-text">Salut Maman, comment ça va ?</div>
+            </div>
+
+            <!-- Message de Maman -->
+            <div class="message mama-message">
+                <div class="message-text">Ça va bien et toi? Tu as trouvé ton sujet de mémoire? T’es restée sur ton idée de jeux vidéo? </div>
+            </div>
+
+            <!-- Message de l'utilisateur -->
+            <div class="message user-message">
+                <div class="message-text">Je voulais faire ça oui, mais après réflexion ça manquait de précision, et puis je voulais quelque chose qui lie le virtuel et le réel. Du coup j’ai pensé au cosplay, je connais de loin mais j’ai une copine qui m’a donné le contact d’une amie à elle qui en fait ça m’a bien aidé pour débuter mon mémoire.</div>
+            </div>
+
+ <div class="message mama-message">
+                <div class="message-text">Le cosplay? Oula qu’est ce que c’est que ça encore? Écoutes si ça peut satisfaire ta curiosité, vas-y !  </div>
+            </div>
+
+ <div class="message user-message">
+                <div class="message-text">Oui je pense que ça peut être intéressant. Lis mon introduction ça va t’en dire un peu plus sur l’axe d’étude que j’ai choisis.</div>
+            </div>
+
+
+  <div class="chat-box">
+    <!-- Message de l'utilisateur avec l'image -->
+    <div class="message user-message">
+        <a href="Intro.html" class="chat-box">
+            <img src="note.png" alt="Note" class="message-image">
+            </a>
+    </div>
+</div>
+
+
+ <div class="message mama-message">
+                <div class="message-text">Ah oui c’est plus clair maintenant. J’ai hâte que tu m’expliques tout quand t’auras terminé. Bon courage ma fille!</div>
+            </div>
+
+
+
+
+
+
+
+             </div>
+
+        <!-- Champ pour envoyer un message (sans le bouton) -->
+        <div class="message-input">
+            <input type="text" placeholder="Tapez un message..." class="input-text">
+        </div>
+
+          <!-- Bouton Home -->
+        <div class="screen-bottom">
+    <a href="GDJ.html" class="home-button-link">
+        <div class="home-button"></div>
+    </a>
+</div>
+    </div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let messages = document.querySelectorAll('.message');
+        let delay = 0;
+        let timer;
+        
+        function showMessages() {
+            messages.forEach((message) => {
+                message.classList.add('show');
+            });
+            clearInterval(timer); // Stop the timer
+        }
+
+        // Fonction pour afficher un message toutes les 3 secondes
+        function startMessageDisplay() {
+            let index = 0;
+
+            timer = setInterval(() => {
+                if (index < messages.length) {
+                    messages[index].classList.add('show');
+                    index++;
+                } else {
+                    clearInterval(timer); // Arrête une fois tous les messages affichés
+                }
+            }, 2000);
+        }
+
+        // Commencer l'affichage automatique
+        startMessageDisplay();
+
+        // Permettre d'afficher immédiatement les messages restants au clic
+        document.body.addEventListener('click', showMessages);
+    });
+</script>
+
+
+
+</body>
+</html>

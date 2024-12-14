@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversation - @billy.the.kiss</title>
+    <link rel="stylesheet" href="billythekiss.css">
+</head>
+<body>
+    <div class="iphone-screen">
+        <!-- Barre de statut -->
+        <div class="status-bar">
+            <span class="time">12:34</span>
+            <span class="battery">🔋 100%</span>
+        </div>
+
+        <!-- En-tête de la conversation -->
+        <div class="conversation-header">
+           <a href="messages.html" class="back-arrow">&#8592;</a> 
+            <div class="profile-picture"></div>
+            <div class="contact-name">@billy.the.kiss</div>
+        </div>
+
+        <!-- Messages -->
+        <div class="messages">
+            <!-- Message de l'utilisateur -->
+            <div class="message user-message">
+                <div class="message-text">Je me suis demandée si les drag queen et drag king peuvent s'apparenter à des cosplayeurs ?  </div>
+            </div>
+
+            <!-- Message de Maman -->
+            <div class="message mama-message">
+                <div class="message-text">Je trouve que c'est un parallèle super intéressant, d'autant plus que les deux pratiques ont des racines différentes. Je pense qu'elles s'influencent fortement et qu'on peut considérer que le drag est une forme de cosplay et que via le cosplay on emprunte des techniques de maquillage au drag par exemple, mais je pense que les deux pratiques restent assez distinctes. Le drag et le cosplay sont apparentés, il suffit de voir le travail de <em>Blondie,DavidChan</em> ou encore le mien. Nous avons tous commencé par le cosplay et on a dévié vers le drag. </div>
+            </div>
+
+            <!-- Message de l'utilisateur -->
+            <div class="message user-message">
+                <div class="message-text">Ce n'est pas la même pratique bien sûr, mais il y a quand même cette volonté de sortir de son identité première pour s'imprégner d’une autre. Il y a aussi l'aspect éphémère, le temps d'une soirée, d'une convention. Est-ce que les enjeux sont les mêmes ? 
+</div>
+            </div>
+
+ <div class="message mama-message">
+                <div class="message-text">Au-delà du fait que les origines du drag et du cosplay sont différentes, leurs enjeux le sont aussi selon moi. L’univers du drag a des références dans la pop culture mais pas seulement, on s’inspire de la mode, des artistes contemporains tandis que le cosplay part d’une fiction, d’un film ou d’un jeu issus de la culture populaire uniquement. La fidélité à la référence n’est pas primordiale du tout chez les drag, au contraire. Le drag queen/ king s'inspire de quelque chose et amène sa touche personnelle là où le cosplayeur cherche à se rapprocher au maximum de la référence costume physique, caractère. </div>
+            </div>
+
+ <div class="message user-message">
+                <div class="message-text">Et pourquoi tu t’es détachée du cosplay pour le drag ? </div>
+            </div>
+
+            <div class="message mama-message">
+                <div class="message-text"> Je ne me suis pas détachée du cosplay j’en fais toujours ! Mais c’est vrai que je fais beaucoup plus de drag. La différence essentielle est que le drag est un show humoristique, érotique ou juste sexy, là où le cosplay est une représentation fidèle, pas toujours adaptée à la scène. Mais j’ai priorisé le drag car le côté performatif est ce que je préfère, donc j’ai pu m’épanouir pleinement</div></div>
+
+                <div class="message user-message">
+                <div class="message-text">Est-ce que le cosplay et/ou le drag t’ont permis de questionner ton identité ? </div>
+            </div>
+
+            <div class="message mama-message">
+                <div class="message-text">Je me suis toujours questionnée et à vrai dire je me questionne toujours. Mais le drag me permet de le faire de pleins de façon et je ne suis pas jugé au contraire <strong><a href=" VOLER LA SCENE.html">c’est une scène faite pour ça et personne ne sera choqué ou dérangé, c’est la norme pour le public </a></strong> , et ça c’est libérateur. 
+</div></div>
+
+        
+
+
+                 </div>
+
+        <!-- Champ pour envoyer un message (sans le bouton) -->
+        <div class="message-input">
+            <input type="text" placeholder="Tapez un message..." class="input-text">
+        </div>
+
+          <!-- Bouton Home -->
+        <div class="screen-bottom">
+    <a href="GDJ.html" class="home-button-link">
+        <div class="home-button"></div>
+    </a>
+</div>
+    </div>
+    </div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let messages = document.querySelectorAll('.message');
+        let delay = 0;
+        let timer;
+        
+        function showMessages() {
+            messages.forEach((message) => {
+                message.classList.add('show');
+            });
+            clearInterval(timer); // Stop the timer
+        }
+
+        // Fonction pour afficher un message toutes les 3 secondes
+        function startMessageDisplay() {
+            let index = 0;
+
+            timer = setInterval(() => {
+                if (index < messages.length) {
+                    messages[index].classList.add('show');
+                    index++;
+                } else {
+                    clearInterval(timer); // Arrête une fois tous les messages affichés
+                }
+            }, 2000);
+        }
+
+        // Commencer l'affichage automatique
+        startMessageDisplay();
+
+        // Permettre d'afficher immédiatement les messages restants au clic
+        document.body.addEventListener('click', showMessages);
+    });
+</script>
+
+</body>
+</html>

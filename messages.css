@@ -1,0 +1,197 @@
+/* Style général */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #f58529, #dd2a7b, #8134af); /* Dégradé rose et violet */
+    font-family: Arial, sans-serif;
+}
+
+/* Conteneur de l'écran iPhone */
+.iphone-screen {
+    width: 375px; /* Largeur de l'iPhone plus réaliste */
+    height: 750px; /* Hauteur d'un écran d'iPhone X */
+    border-radius: 60px; /* Coins arrondis prononcés */
+    border: 10px solid #e2e3f1; /* Bordure douce */
+    background-color: whitesmoke; /* Fond blanc pour l'écran */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Aligner les éléments au haut de l'écran */
+    position: relative;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4); /* Ombre douce pour un effet de profondeur */
+}
+
+
+/* Barre de statut (heure et batterie) */
+.status-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    color: black; /* Texte noir pour l'heure et la batterie */
+    font-size: 15px;
+    font-weight: normal;
+}
+
+/* Titre "Messages" */
+.app-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: left; /* Aligner le texte à gauche */
+    margin-top: -10px; /* Espace sous la barre de statut */
+    margin-left: 20px;
+    color: black; /* Texte noir pour le titre Messages */
+    position: relative;
+    top: 40px; /* Placer le titre juste en dessous de la barre de statut */
+    left: -100px;
+    z-index: 10; /* S'assurer que le titre reste au-dessus des autres éléments */
+    border-radius: 5px; /* Coins arrondis pour un meilleur effet visuel */
+}
+
+/* Barre de recherche */
+.search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #e0e0e0;
+    border-radius: 30px;
+    padding: 5px 10px;
+    margin: 20px;
+    width: 90%;
+    margin-top: 40px;
+}
+
+.search-input {
+    border: none;
+    background: none;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    color: #333;
+    border-radius: 30px;
+    outline: none;
+}
+
+.search-icon {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Section des conversations */
+.screen-content {
+    flex-grow: 1;
+    margin: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background: transparent;
+    overflow-y: auto; /* Permet de faire défiler les conversations */
+}
+
+/* Aperçu des conversations */
+.conversations {
+    width: 100%;
+    margin-top: 2px;
+}
+
+.conversation {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+}
+
+.message-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-name {
+    font-weight: bold;
+    color: black;
+}
+
+.last-message {
+    font-size: 14px;
+    color: #777;
+}
+
+.timestamp {
+    font-size: 12px;
+    color: #999;
+    align-self: flex-end;
+    margin-left: auto; /* Pousse l'heure à droite */
+    margin-right: 20px; /* Ajoute un petit espace à droite pour ne pas être collée au bord */
+    white-space: nowrap; /* Empêche le texte de se casser en ligne */
+}
+
+/* Section inférieure avec bouton Home */
+.screen-bottom {
+    height: 130px; /* Hauteur pour simuler un contour au-dessus du bouton */
+    background-color: #d8d9e3; /* Couleur gris clair pour le dock */
+    border-top: 5px solid rgba(0, 0, 0, 0.1); /* Ligne de séparation subtile en haut */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-bottom-left-radius: 50px; /* Coins arrondis du bas gauche */
+    border-bottom-right-radius: 50px; /* Coins arrondis du bas droit */
+}
+
+/* Bouton Home */
+.home-button {
+    width: 80px; /* Taille pour correspondre au bouton Home réel */
+    height: 80px;
+    background-color: #d8d9e3; /* Couleur gris clair pour le bouton Home */
+    border: 2px solid #e2e3f1; /* Contour gris doux */
+    border-radius: 50%; /* Forme circulaire du bouton Home */
+    margin: 20px auto;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Ombre plus prononcée */
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.home-button:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); /* Ombre plus forte au survol */
+    transform: scale(1.1); /* Légère augmentation au survol */
+}
+
+
+/* Ajouter l'encoche pour simuler un écran plus réaliste */
+.iphone-screen::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px; /* Largeur de l'encoche */
+    height: 30px;
+    background: #d8d9e3;
+    border-radius: 0 0 15px 15px; /* Coins arrondis de l'encoche */
+}
+
+a {
+    text-decoration: none;  /* Supprimer le soulignement par défaut des liens */
+    color: inherit; /* Hériter de la couleur du texte parent */
+}
+
+.conversation:hover {
+    background-color: #f0f0f0; /* Changer la couleur de fond au survol pour une interaction visuelle */
+transform: scale(1.02);
+transition: background-color 0.3s ease, transform 0.3s ease; /* Transition douce */
+}
+
+
+.unread-badge {
+    width: 13px;
+    height: 13px;
+    background-color: #007AFF; /* Bleu iMessage */
+    border-radius: 60%; /* Forme circulaire */
+    margin-right: 8px; /* Espacement entre la pastille et le texte */
+    display: inline-block; /* Pour que la pastille soit alignée avec le texte */
+    margin-left: -10px;
+}

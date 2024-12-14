@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversation - @cherrytree4212</title>
+    <link rel="stylesheet" href="cherrytree4212.css">
+</head>
+<body>
+    <div class="iphone-screen">
+        <!-- Barre de statut -->
+        <div class="status-bar">
+            <span class="time">12:34</span>
+            <span class="battery">🔋 100%</span>
+        </div>
+
+        <!-- En-tête de la conversation -->
+        <div class="conversation-header">
+          <a href="messages.html" class="back-arrow">&#8592;</a> 
+            <div class="profile-picture"></div>
+            <div class="contact-name">@cherrytree4212</div>
+        </div>
+
+        <!-- Messages -->
+        <div class="messages">
+            <!-- Message de l'utilisateur -->
+            <div class="message user-message">
+                <div class="message-text">Salut ! Je me permets de t’envoyer un message car on a une copine en commun qui m’a donné ton instagram. J’étudie en école d’art et je cherche des cosplayeurs et cosplayeuses pour parler de leur pratique et avoir leur avis sur des questions sociétales qui en découlent. Alors si t’es partant.e on peut en discuter ? Sache que si des questions te dérangent tu peux tout à fait ne pas y répondre et/ou me le signaler. En espérant ne pas t’avoir dérangée, et à bientôt j’espère ! :)</div>
+            </div>
+
+            <!-- Message de Maman -->
+            <div class="message mama-message">
+                <div class="message-text">Coucou! Clara m’avait prévenue et pas de soucis pour échanger avec toi sur le cosplay :D n’hésite pas à m’envoyer tes questions et je ferai mon possible pour y répondre. bonne journée! </div>
+            </div>
+
+            <!-- Message de l'utilisateur -->
+            <div class="message user-message">
+                <div class="message-text">Super ! Si j’utilise les mauvais termes ou des termes offensants/dégradants, n’hésite pas à me corriger, j’ai fait mes recherches mais étant novice je fais encore des erreurs dans mes formulations parfois. Et enfin, si tu penses à d’autres cosplayeurs ou cosplayeuses avec qui je pourrais parler, n’hésite pas à me partager leurs contact, j’aimerai avoir plein de pratiquants.es différents.es. Aparté fait, quelle est ton histoire avec le cosplay ? </div>
+            </div>
+
+ <div class="message mama-message">
+                <div class="message-text">Je l’ai découverte à 13 ans grâce à MySpace. J'ai harcelé ma mère pour faire un cosplay d’<em>Amane Misa</em> dans Death Note. Elle m'a aidé à trouver des vêtements adaptés à mon âge et permis de le faire et tout est parti de là. J'ai mis beaucoup de temps à vraiment me lancer car je vivais dans une petite ville où c'était pointé du doigt et les ressources d'il y a 15 ans n'étaient pas les mêmes qu'aujourd'hui. J'ai fait beaucoup de cosplay “armoire” c'est-à-dire avec des vêtements que je pouvais avoir ou dénicher avant de faire de la couture et essayer des choses par moi-même. Cela fait 2 ans que je n'ai “rien” fait en cosplay par manque de temps mais sinon, j'essaie de participer une fois par an à une convention et de faire quelque chose pour l'occasion.</div>
+            </div>
+
+ <div class="message user-message">
+                <div class="message-text">Ah oui t’es une ancienne ! C’est super d’être rentrée aussi tôt dans cet univers là j’imagine. Est-ce que tu as déjà fait du crossplay? Si non, pourquoi ? Est-ce répandu ? Et du gender bender ? </div>
+            </div>
+
+            <div class="message mama-message">
+                <div class="message-text">J’ai plusieurs projets de crossplay et genderbend mais aucun n’est finalisé. Je suis pas mal de cosplayeurs.es qui en font et je trouve ça génial. Je ne sais pas à quel point c’est répandu, j’ai l'impression que ça dépend beaucoup de la personne. C’est des combats très actifs dans la communauté car les cosplayeurs.ses qui pratiquent le genderbend rencontrent d’autres fans. Mais j'ai déjà vu des cosplayeurs.es expliquer qu’ils n’en font pas car ils préfèrent cosplayer des personnages en accord avec leur genre et c’est ok aussi.  </div>
+            </div>
+
+            <div class="message user-message">
+                <div class="message-text">C’est vrai que la question du genre est intimement liée au cosplay, mais en même temps, est-ce qu’on a réellement un genre quand on se cosplay ? On peut être une femme, un homme, un agenré ou même une chose non? </div>
+            </div>
+
+             <div class="message mama-message">
+                <div class="message-text">Le  principe du cosplay est de devenir quelqu'un d'autre qu'il soit homme, femme, alien ou autre. Quand on porte un cosplay, on est avant tout un personnage qui vient la plupart du temps d'un univers issu de l'imaginaire donc la question du genre n'est pas vraiment déterminante. <strong><a href="IEME GENRE.html"> La liberté du cosplay réside d'ailleurs dans le fait de pouvoir cosplayer qui on veut ou ce qu'on veut</strong></a>. Si ton objectif, c'est de te transformer en <em>Gundam</em> et bien go ! Et ce peu importe ton genre. </div>
+            </div></div>
+
+        <!-- Champ pour envoyer un message (sans le bouton) -->
+        <div class="message-input">
+            <input type="text" placeholder="Tapez un message..." class="input-text">
+        </div>
+
+         <!-- Bouton Home -->
+        <div class="screen-bottom">
+    <a href="GDJ.html" class="home-button-link">
+        <div class="home-button"></div>
+    </a>
+</div>
+    </div>
+    </div>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let messages = document.querySelectorAll('.message');
+        let delay = 0;
+        let timer;
+        
+        function showMessages() {
+            messages.forEach((message) => {
+                message.classList.add('show');
+            });
+            clearInterval(timer); // Stop the timer
+        }
+
+        // Fonction pour afficher un message toutes les 3 secondes
+        function startMessageDisplay() {
+            let index = 0;
+
+            timer = setInterval(() => {
+                if (index < messages.length) {
+                    messages[index].classList.add('show');
+                    index++;
+                } else {
+                    clearInterval(timer); // Arrête une fois tous les messages affichés
+                }
+            }, 2000);
+        }
+
+        // Commencer l'affichage automatique
+        startMessageDisplay();
+
+        // Permettre d'afficher immédiatement les messages restants au clic
+        document.body.addEventListener('click', showMessages);
+    });
+</script>
+
+</body>
+</html>

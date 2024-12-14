@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversation - @indian_cosplay19</title>
+    <link rel="stylesheet" href="indiancosplay.css">
+</head>
+<body>
+    <div class="iphone-screen">
+        <!-- Barre de statut -->
+        <div class="status-bar">
+            <span class="time">12:34</span>
+            <span class="battery">🔋 100%</span>
+        </div>
+
+        <!-- En-tête de la conversation -->
+        <div class="conversation-header">
+            <a href="messages.html" class="back-arrow">&#8592;</a> 
+            <div class="profile-picture"></div>
+            <div class="contact-name">@indian_cosplay19</div>
+        </div>
+
+        <!-- Messages -->
+        <div class="messages">
+            <!-- Message de l'utilisateur -->
+            <div class="message user-message">
+                <div class="message-text">Je voulais savoir si tu étais né en Inde et si tu y vivais ? </div>
+            </div>
+
+            <!-- Message de Maman -->
+            <div class="message mama-message">
+                <div class="message-text">Oui je suis né en Inde et j’y vis toujours actuellement. J’ai passé quelques années en Corée du Sud mais je suis revenu ici. </div>
+            </div>
+
+            <!-- Message de l'utilisateur -->
+            <div class="message user-message">
+                <div class="message-text">D’accord, est- ce qu’en Inde, le cosplay est pratiqué ? 
+</div>
+            </div>
+
+ <div class="message mama-message">
+                <div class="message-text">Oui mais très peu, enfin il existe des conventions, des concours mais on reste des marginaux et beaucoup de gens nous rejettent. Après les références de mangas sont hyper présentes du fait de la proximité entre le Japon et notre propre culture.</div>
+            </div>
+
+ <div class="message user-message">
+                <div class="message-text">D’accord et est-ce que le fait que tu sois un homme te marginalise encore plus ? </div>
+            </div>
+
+            <div class="message mama-message">
+                <div class="message-text"> Non, ça n’ a pas trop d’importance même si dans ma famille ça a été assez mal accepté mais mes amis trouvent ça super cool. Et j’ai pu faire plein de rencontres incroyables. Même si on est quand même en minorité, je ne  pense pas être plus marginalisé que les femmes.</div></div>
+
+                <div class="message user-message">
+                <div class="message-text">As-tu pratiqué le cosplay en Corée du sud ? </div>
+            </div>
+
+            <div class="message mama-message">
+                <div class="message-text">Non, je ne l’ai fait que dans mon pays. En fait, j'ai commencé à mon retour en Inde. 
+</div></div>
+
+  <div class="message user-message">
+                <div class="message-text">Sur ton profil instagram, j’ai vu que t’avais un compte onlyfan, il est lié à tes cosplays ? </div>
+            </div>
+
+            <div class="message mama-message">
+                <div class="message-text">Ouais tout à fait, en fait pour mes cosplays j’ai beaucoup travaillé mon apparence physique et sur les réseaux sociaux j’ai eu quelques propositions d’achat de photos plus sexys. Etant donné que mon compte est en anglais, j’ai attiré beaucoup d’Américains et pour eux, c’est vraiment normal d’acheter des photos X, ici ça n'a rien à voir. Donc je me suis dit tant qu’à faire autant en profiter.
+</div></div>
+
+<div class="message user-message">
+                <div class="message-text">As-tu des projets concernant le cosplay ? Peut-être te professionnaliser? Ou vivre ailleurs ? Ou c’est juste du loisir et ça te plait comme ça ?</div>
+            </div>
+
+            <div class="message mama-message">
+                <div class="message-text">Je ne veux pas me professionnaliser. Enfin j’en sais trop rien. Je suis encore jeune et je débute dans le cosplay en quelque sorte (ça ne fait que 3 ans). Je pense qu’une fois que j’aurai trouvé une femme, je verrai avec elle ce qu’elle en pense, <strong><a href=" CULTIVER.html">ici c’est pas comme aux États-Unis</a></strong> on ne peut pas tout faire sans penser aux autres. 
+</div></div>
+
+
+        
+
+
+                 </div>
+
+        <!-- Champ pour envoyer un message (sans le bouton) -->
+        <div class="message-input">
+            <input type="text" placeholder="Tapez un message..." class="input-text">
+        </div>
+
+          <!-- Bouton Home -->
+        <div class="screen-bottom">
+    <a href="GDJ.html" class="home-button-link">
+        <div class="home-button"></div>
+    </a>
+</div>
+    </div>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let messages = document.querySelectorAll('.message');
+        let delay = 0;
+        let timer;
+        
+        function showMessages() {
+            messages.forEach((message) => {
+                message.classList.add('show');
+            });
+            clearInterval(timer); // Stop the timer
+        }
+
+        // Fonction pour afficher un message toutes les 3 secondes
+        function startMessageDisplay() {
+            let index = 0;
+
+            timer = setInterval(() => {
+                if (index < messages.length) {
+                    messages[index].classList.add('show');
+                    index++;
+                } else {
+                    clearInterval(timer); // Arrête une fois tous les messages affichés
+                }
+            }, 2000);
+        }
+
+        // Commencer l'affichage automatique
+        startMessageDisplay();
+
+        // Permettre d'afficher immédiatement les messages restants au clic
+        document.body.addEventListener('click', showMessages);
+    });
+</script>
+
+</body>
+</html>

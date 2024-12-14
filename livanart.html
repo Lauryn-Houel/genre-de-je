@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversation - @livanart</title>
+    <link rel="stylesheet" href="livanart.css">
+</head>
+<body>
+    <div class="iphone-screen">
+        <!-- Barre de statut -->
+        <div class="status-bar">
+            <span class="time">12:34</span>
+            <span class="battery">🔋 100%</span>
+        </div>
+
+        <!-- En-tête de la conversation -->
+        <div class="conversation-header">
+            <a href="messages.html" class="back-arrow">&#8592;</a> 
+            <div class="profile-picture"></div>
+            <div class="contact-name">@livanart</div>
+        </div>
+
+        <!-- Messages -->
+        <div class="messages">
+            <!-- Message de l'utilisateur -->
+            <div class="message user-message">
+                <div class="message-text">Est-ce que ça t'a poussé à te questionner sur ton identité de genre ? </div>
+            </div>
+
+            <!-- Message de Maman -->
+            <div class="message mama-message">
+                <div class="message-text">Oui complètement, ça m'a permis de mieux comprendre l'idée des genres et c'est ce qui m'a convaincue que j'étais genderfluid*, j'ai toujours été du genre à me questionner sur mon genre et le cosplay a su m'offrir une réponse et mon corps également. Ça me permet de m'accepter et de m'aimer comme je suis. Etant donné que j’appartiens aux deux genres, je switche de l’un à l’autre sans problème (bien que j’aie une préférence pour les personnages masculins). J’ai incarné <em>Rengoku, Pyke, Aphelios…</em> </div>
+            </div>
+
+            <!-- Message de l'utilisateur -->
+            <div class="message user-message">
+                <div class="message-text">Ça fait sens. Avec une autre cosplayeuse, j’ai parlé des freehugers, tu en as déjà croisés ?</div>
+            </div>
+
+ <div class="message mama-message">
+                <div class="message-text">Oui j’en ai déjà rencontrés et vu que je ne suis pas tactile, ça n’a pas toujours été facile car certains ne comprennent pas le principe du non. J’ai la chance d’avoir été mise en garde par mes ami.e.s pour ça ! Je trouve ça génial que des gens veuillent distribuer de la tendresse mais en respectant le consentement des autres ça serait mieux. </div>
+            </div>
+
+ <div class="message user-message">
+                <div class="message-text">C’est vrai que c’est assez fou d’imaginer la situation. Est-ce-que les organisateurs des conventions interviennent ? </div>
+            </div>
+
+            <div class="message mama-message">
+                <div class="message-text">En général il ne sont pas très insistants, mais s’ils le sont, il faut prévenir les membres de la sécurité et bien faire attention à l’endroit où la personne met ses mains. On peut vite passer d’une agression sexuelle à un vol d’objet, donc à mon sens il faut rester méfiant. Mais maintenant, il  y a pas mal de conventions qui établissent des espèces de règlement ou en tout cas de règles du bien vivre ensemble notamment vis-à-vis des cosplayeurs.ses. Certains ont constaté que ça avait permis de réduire certaines incivilités, par exemple de toucher les éléments d’un costume sans demander en amont, prendre en photo la personne  pendant qu’elle mange ou quand elle est de dos…  </div></div>
+
+                <div class="message user-message">
+                <div class="message-text">Et que penses-tu des zones non mixtes ? Est-ce-que ça existe dans la communauté des cosplayeurs et est-ce que ce serait possible de les mettre en place selon toi ? </div>
+            </div>
+
+            <div class="message mama-message">
+                <div class="message-text">Je suis totalement contre, en général. Je trouve que ça incite au racisme et aux discriminations en tout genre. Ça rompt totalement la communication entre les personnes en zone non-mixte et les autres, et c’est super contre-productif selon moi.  Et au-delà de l’inutilité de ces zones, <strong><a href=" HUMANS ONLY.html">la séparation serait impossible dans le cosplay.</a></strong> Par exemple, moi en tant que genderfluid, je suis partout ou nulle part ? Ca n’aurait aucun sens et ça effacerait tout l’aspect queer et inclusif de la communauté.</div></div>
+
+        
+
+
+                 </div>
+
+        <!-- Champ pour envoyer un message (sans le bouton) -->
+        <div class="message-input">
+            <input type="text" placeholder="Tapez un message..." class="input-text">
+        </div>
+
+           <!-- Bouton Home -->
+        <div class="screen-bottom">
+    <a href="GDJ.html" class="home-button-link">
+        <div class="home-button"></div>
+    </a>
+</div>
+    </div>
+    </div>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let messages = document.querySelectorAll('.message');
+        let delay = 0;
+        let timer;
+        
+        function showMessages() {
+            messages.forEach((message) => {
+                message.classList.add('show');
+            });
+            clearInterval(timer); // Stop the timer
+        }
+
+        // Fonction pour afficher un message toutes les 3 secondes
+        function startMessageDisplay() {
+            let index = 0;
+
+            timer = setInterval(() => {
+                if (index < messages.length) {
+                    messages[index].classList.add('show');
+                    index++;
+                } else {
+                    clearInterval(timer); // Arrête une fois tous les messages affichés
+                }
+            }, 2000);
+        }
+
+        // Commencer l'affichage automatique
+        startMessageDisplay();
+
+        // Permettre d'afficher immédiatement les messages restants au clic
+        document.body.addEventListener('click', showMessages);
+    });
+</script>
+
+</body>
+</html>

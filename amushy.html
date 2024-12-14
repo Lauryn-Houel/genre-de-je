@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversation - @amu_shy</title>
+    <link rel="stylesheet" href="amushy.css">
+</head>
+<body>
+    <div class="iphone-screen">
+        <!-- Barre de statut -->
+        <div class="status-bar">
+            <span class="time">12:34</span>
+            <span class="battery">🔋 100%</span>
+        </div>
+
+        <!-- En-tête de la conversation -->
+        <div class="conversation-header">
+           <a href="messages.html" class="back-arrow">&#8592;</a> 
+            <div class="profile-picture"></div>
+            <div class="contact-name">@amu_shy</div>
+        </div>
+
+        <!-- Messages -->
+        <div class="messages">
+            <!-- Message de l'utilisateur -->
+            <div class="message user-message">
+                <div class="message-text">Comment t’as découvert le cosplay?</div>
+            </div>
+
+            <!-- Message de Maman -->
+            <div class="message mama-message">
+                <div class="message-text">Alors j'ai découvert ça grâce aux réseaux sociaux aux alentours de 2015, je suivais beaucoup de personnes qui vivaient à l'étranger notamment à cette époque. Je pense que j'ai découvert ça un peu par hasard puisque j'apprécie les mangas et les jeux vidéos. Puis à cette époque, ma belle sœur avait un style alternatif et allait en convention, j'ai toujours aimé les modes alternatives au niveau vestimentaire même si je ne l'exprimais que peu. En 2016, c'est venu un peu naturellement, j'ai voulu aller à la Japan Expo avec elle et j'ai demandé à ma mère de m'apprendre à coudre.</div>
+            </div>
+
+            <!-- Message de l'utilisateur -->
+            <div class="message user-message">
+                <div class="message-text">Le cosplay est une communauté grandement body positive, il est souvent dit, que peu importe son physique, on peut incarner le personnage qu'on souhaite, quel est ton avis ? Est-ce que ton physique a déjà été un obstacle pour un cosplay ? </div>
+            </div>
+
+ <div class="message mama-message">
+                <div class="message-text">Je viens justement de partager un Tik Tok qui dénonce le beauty privilège alors je suis bien consciente que la communauté et les personnes qui “consomment” du contenu cosplay doivent revoir leurs attentes et être plus inclusives ! Oui mon physique m'a déjà empêchée d’incarner certains personnages, notamment <em>Lucy Heartfilia</em>de Fairy Tail  qui est grande et mince avec une forte poitrine, ce  qui n'est pas mon cas. Je me suis donc imposée de ne pas la refaire car ça ne rendrait pas bien ! </div>
+            </div>
+
+ <div class="message user-message">
+                <div class="message-text">Ah! donc c’est toi qui t’es censurée en gros… Le cosplay est souvent assimilé à une culture surexualisée. Ceci est sûrement dû aux influences de la culture manga. Qu'en penses-tu ?</div>
+            </div>
+
+            <div class="message mama-message">
+                <div class="message-text">Oui c’est vrai que c’est très sexualisé, souvent les costumes sont super courts ou vite transparents mais personne ne force les cosplayeurs.ses à porter ça… Je me considère féministe et le cosplay peut être une bonne plateforme notamment pour faire accepter que les femmes peuvent avoir envie d'être sexy ou badass ou les deux mais aussi qu'elles existent dans la pop culture et autrement que dans l'imaginaire masculin. <strong><a href="FEMME-COCHONNE.html">Dans le cosplay, on a tendance à différencier le cosplay “normal” du cosplay “sexy”</strong></a> et je trouve ça dommage car si des femmes ont envie de se sentir sexy et de se montrer en tant que telles pourquoi pas. Pour moi, le féminisme c'est la défense de l'ensemble des femmes et la revendication de l'égalité pour toutes et pas seulement pour certaines. </div></div> </div>
+
+        <!-- Champ pour envoyer un message (sans le bouton) -->
+        <div class="message-input">
+            <input type="text" placeholder="Tapez un message..." class="input-text">
+        </div>
+
+          <!-- Bouton Home -->
+        <div class="screen-bottom">
+    <a href="GDJ.html" class="home-button-link">
+        <div class="home-button"></div>
+    </a>
+</div>
+    </div>
+    </div>
+
+   <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let messages = document.querySelectorAll('.message');
+        let delay = 0;
+        let timer;
+        
+        function showMessages() {
+            messages.forEach((message) => {
+                message.classList.add('show');
+            });
+            clearInterval(timer); // Stop the timer
+        }
+
+        // Fonction pour afficher un message toutes les 3 secondes
+        function startMessageDisplay() {
+            let index = 0;
+
+            timer = setInterval(() => {
+                if (index < messages.length) {
+                    messages[index].classList.add('show');
+                    index++;
+                } else {
+                    clearInterval(timer); // Arrête une fois tous les messages affichés
+                }
+            }, 2000);
+        }
+
+        // Commencer l'affichage automatique
+        startMessageDisplay();
+
+        // Permettre d'afficher immédiatement les messages restants au clic
+        document.body.addEventListener('click', showMessages);
+    });
+</script>
+
+</body>
+</html>
