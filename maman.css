@@ -67,6 +67,17 @@ body {
     background-color: #ccc;
     border-radius: 50%;
     margin-right: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Image de profil */
+.profile-picture img {
+    width: 100%; /* L'image occupe toute la largeur de la bulle */
+    height: 100%; /* L'image occupe toute la hauteur de la bulle */
+    object-fit: cover; /* L'image couvre entièrement la bulle sans déformer l'image */
 }
 
 .contact-name {
@@ -118,10 +129,6 @@ body {
     margin-right: 30px;
 }
 
-.message-text {
-    font-size: 16px;
-    line-height: 1.4;
-}
 
 /* Champ de saisie (sans bouton) */
 .message-input {
@@ -235,4 +242,19 @@ body {
 
 a {
     text-decoration: none;
+}
+
+/* Message informatif */
+.message.info-message {
+    font-size: 14px; /* Taille de police plus petite */
+    color: #888; /* Couleur plus claire pour l'info */
+    font-style: italic; /* Style en italique pour le texte */
+    text-align: center; /* Centrer le texte */
+    margin-top: 10px; /* Ajoute un peu d'espace au-dessus du message */
+}
+
+/* Texte du message */
+.message-text {
+    font-size: 13px;
+    line-height: 1.4;
 }

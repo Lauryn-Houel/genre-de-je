@@ -46,7 +46,7 @@
             display: flex;
             align-items: center;
             padding: 10px 20px;
-            font-size: 18px;
+            font-size: 24px;
             font-weight: bold;
             color: black;
             background-color: #d8d9e3;
@@ -56,18 +56,20 @@
         /* Contenu principal */
         .screen-content {
             flex-grow: 1;
-            padding: 10px;
+            padding: 5px;
             background: lightgrey;
             color: black;
             overflow-y: auto;
         }
 
-    .book-grid {
+   .book-grid {
     display: grid;
-    grid-template-columns: 1fr; /* Une seule colonne, chaque "livre" occupe toute la largeur */
-    gap: 10px; /* Espacement entre les livres */
-    padding: 5px;
+    grid-template-columns: repeat(1, minmax(150px, 1fr));
+    gap: 10px;
+    padding: 10px;
 }
+
+
 
 
   .book {
@@ -75,23 +77,36 @@
     background: white;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    padding: 10px;
+    padding: 8px;
+    margin: O auto;
     align-items: flex-start; /* Aligne le contenu en haut */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 90%; /* S'assure que le conteneur reste dans l'écran */
 }
 
+
    .book img {
-    width: 80px; /* Largeur fixe pour les images */
-    height: 120px; /* Hauteur ajustée pour former un rectangle */
+    width: 70px; /* Largeur fixe pour les images */
+    height: 100px; /* Hauteur ajustée pour former un rectangle */
     object-fit: cover; /* S'assure que l'image garde ses proportions */
     border-radius: 5px;
-    margin-right: 10px; /* Espacement avec le texte */
+    margin-right: 8px; /* Espacement avec le texte */
 }
 
 .book-info {
     display: flex;
     flex-direction: column; /* Aligne les textes verticalement */
     justify-content: center;
+     word-wrap: break-word; /* Permet de couper les mots longs */
+    overflow: hidden; /* Cache le texte qui dépasse */
+    text-overflow: ellipsis; /* Ajoute des "..." si le texte est trop long */
+    white-space: nowrap; /* Empêche le retour à la ligne */
+}
+
+
+.book-info {
+    flex: 1; /* Permet au conteneur de s'adapter à l'espace disponible */
+    overflow: hidden; /* Empêche le contenu de dépasser */
 }
 
 
@@ -99,7 +114,11 @@
     font-size: 14px;
     font-weight: bold;
     color: #333;
-    margin-bottom: 5px;
+    margin-bottom: 4px;
+     word-wrap: break-word;  /* Permet au texte de se couper et de passer à la ligne suivante */
+    overflow-wrap: break-word; /* Assure que le texte trop long se casse pour éviter le débordement */
+    white-space: normal; /* Permet les retours à la ligne */
+
 }
 
 .book-author,
@@ -107,7 +126,10 @@
 .book-date {
     font-size: 12px;
     color: #555;
-    margin-bottom: 3px;
+    margin-bottom: 2px;
+     word-wrap: break-word;  /* Permet au texte de se couper et de passer à la ligne suivante */
+    overflow-wrap: break-word; /* Assure que le texte trop long se casse pour éviter le débordement */
+    white-space: normal; /* Permet les retours à la ligne */
 }
 
         .book:hover {
@@ -125,20 +147,23 @@ transition: background-color 0.3s ease, transform 0.3s ease; /* Transition douce
             align-items: center;
         }
 
-        .home-button {
-            width: 80px;
-            height: 80px;
-            background-color: rgba(255, 255, 255, 0.5);
-            border: 2px solid rgba(255, 255, 255, 0.7);
-            border-radius: 50%;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-            transition: box-shadow 0.3s ease, transform 0.3s ease;
-        }
+        /* Bouton Home */
+.home-button {
+    width: 80px;
+    height: 80px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    margin: 10px;
+}
 
-        .home-button:hover {
-               box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+.home-button:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
     transform: scale(1.1);
 }
+
 
 
         /* Encoche de l'écran */

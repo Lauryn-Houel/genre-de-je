@@ -66,6 +66,17 @@ body {
     background-color: #ccc;
     border-radius: 50%;
     margin-right: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Image de profil */
+.profile-picture img {
+    width: 100%; /* L'image occupe toute la largeur de la bulle */
+    height: 100%; /* L'image occupe toute la hauteur de la bulle */
+    object-fit: cover; /* L'image couvre entièrement la bulle sans déformer l'image */
 }
 
 .contact-name {
@@ -185,4 +196,12 @@ a { /* Supprimer le soulignement par défaut des liens */
     color: inherit; /* Hériter de la couleur du texte parent */
         text-decoration: none;
 }
+
+/* Style général des messages */
+.chat-box {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
 

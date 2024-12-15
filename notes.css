@@ -58,11 +58,12 @@ body {
 
 /* Titre de l'application */
 .app-title {
-    font-size: 20px;
+    font-size: 24px;
     font-weight: lighter;
     color: black;
     margin: 0;
     margin-left: 15px;
+    font-weight: bold;
 }
 
 
