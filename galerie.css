@@ -32,24 +32,27 @@ body {
     font-size: 15px;
 }
 
-/* Style des dossiers */
+/* Conteneur des dossiers */
 .screen-content {
     flex-grow: 1;
     padding: 30px;
-    background: mediumpurple; /* Bloc gris */
+    background: mediumpurple;
     color: black;
     overflow-y: auto;
     display: flex;
-    flex-wrap: wrap; /* Permet de passer à une nouvelle ligne */
-    justify-content: space-between; /* Espacement horizontal */
-    align-items: flex-start; /* Alignement vertical */
-    gap: 1px; /* Espacement entre les dossiers */
-    font-size: 14px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 50px; /* Espacement général entre les dossiers */
+    row-gap: 0px;
 }
 
+/* Style des dossiers */
 .folder {
-    width: 45%; /* Largeur relative pour deux dossiers par ligne */
-    text-align: center; /* Centre les dossiers et titres */
+    width: 45%; /* Deux dossiers par ligne */
+    text-align: center;
+    margin-bottom: 0px; /* Réduit l'espace sous chaque dossier */
+    margin-top: -5px;
 }
 
 
@@ -58,7 +61,7 @@ body {
     display: block;
     text-decoration: none;
     color: #333;
-    font-size: 18px; /* Augmente la taille du texte */
+    font-size: 12px; /* Augmente la taille du texte */
     font-weight: bold;
     margin-top: 10px; /* Espacement entre l'icône et le titre */
 }

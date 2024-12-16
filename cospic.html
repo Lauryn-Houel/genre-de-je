@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie</title>
+    <link rel="stylesheet" href="cospic.css">
+</head>
+<body>
+    <div class="iphone-screen">
+        <!-- Barre de statut (heure et batterie) -->
+        <div class="status-bar">
+            <span class="time">14:43</span>
+            <span class="battery">🔋 100%</span>
+        </div>
+        
+        <!-- Contenu principal de l'écran -->
+        <div class="screen-content">
+            <!-- Flèche de retour en haut à gauche -->
+            <a href="galerie.html" class="back-arrow">&#8592;</a> <!-- Flèche de retour -->
+
+            <!-- Carré au centre avec image et flèches -->
+            <div class="image-viewer">
+                <div class="nav-arrow left" onclick="prevImage()">&#9664;</div> <!-- Flèche gauche -->
+                <img src="cosplayeurs.png" alt="Image Bonus" id="current-image">
+                <div class="nav-arrow right" onclick="nextImage()">&#9654;</div> <!-- Flèche droite -->
+            </div>
+
+            <!-- Légende de l'image -->
+            <div id="image-caption" class="image-caption">Légende de l'image</div>
+        </div>
+
+        <!-- Section inférieure avec bouton Home -->
+        <div class="screen-bottom">
+            <a href="index.html" class="home-button-link">
+                <div class="home-button"></div>
+            </a>
+        </div>
+    </div>
+
+    <!-- Script JavaScript -->
+    <script>
+        // Liste des images et légendes associées
+        const images = [
+            { src: "cosplayeurs.png", caption: "Cosplayeurs.ses.x" },
+            { src: "1.jpeg", caption: "Amushy" },
+            { src: "2.jpeg", caption: "Aori" },
+            { src: "3.jpeg", caption: "Aori" },
+            { src: "4.jpeg", caption: "Aori" },
+            { src: "5.jpeg", caption: "Aori" },
+            { src: "6.jpeg", caption: "Aori" },
+            { src: "7.jpeg", caption: "Aori" },
+            { src: "8.jpeg", caption: "Aori" },
+            { src: "9.jpeg", caption: "Aori" },
+            { src: "10.jpeg", caption: "Aori" },
+            { src: "11.jpeg", caption: "Aori" },
+            { src: "12.jpeg", caption: "Aori" },
+            { src: "13.jpeg", caption: "Aori" },
+            { src: "14.jpeg", caption: "Aori" },
+            { src: "15.jpeg", caption: "Aori" },
+            { src: "16.jpeg", caption: "Aori" },
+            { src: "17.jpeg", caption: "Aori" },
+            { src: "18.jpeg", caption: "Aori" },
+            { src: "19.jpeg", caption: "Aori" },
+            { src: "20.jpeg", caption: "Aori" },
+            { src: "21.jpeg", caption: "Aori" },
+            { src: "22.jpeg", caption: "Aori" },
+            { src: "23.jpeg", caption: "Aori" },
+            { src: "24.jpeg", caption: "Aori" },
+            { src: "25.jpeg", caption: "Aori" },
+            { src: "26.jpeg", caption: "Aori" },
+            { src: "27.jpeg", caption: "Aori" },
+            { src: "28.jpeg", caption: "Aori" },
+            { src: "29.jpeg", caption: "Aori" },
+            { src: "30.jpeg", caption: "Aori" },
+            { src: "31.jpeg", caption: "Aori" },
+            { src: "32.jpeg", caption: "Aori" },
+            { src: "33.jpeg", caption: "Aori" },
+            { src: "34.jpeg", caption: "Aori" },
+            { src: "35.jpeg", caption: "Aori" },
+            { src: "36.jpeg", caption: "Aori" }
+        ];
+
+        let currentIndex = 0;
+
+        // Fonction pour afficher l'image précédente
+        function prevImage() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length; // Boucle vers la dernière image si on recule depuis la première
+            updateImage();
+        }
+
+        // Fonction pour afficher l'image suivante
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % images.length; // Boucle vers la première image si on avance depuis la dernière
+            updateImage();
+        }
+
+        // Fonction pour mettre à jour l'image et la légende
+        function updateImage() {
+            document.getElementById("current-image").src = images[currentIndex].src;
+            document.getElementById("image-caption").textContent = images[currentIndex].caption;
+        }
+
+        // Initialiser l'image et la légende au chargement
+        updateImage();
+    </script>
+</body>
+</html>
