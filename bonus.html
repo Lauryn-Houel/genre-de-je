@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie</title>
+    <link rel="stylesheet" href="cospic.css">
+</head>
+<body>
+    <div class="iphone-screen">
+        <!-- Barre de statut (heure et batterie) -->
+        <div class="status-bar">
+            <span class="time">14:43</span>
+            <span class="battery">🔋 100%</span>
+        </div>
+        
+        <!-- Contenu principal de l'écran -->
+        <div class="screen-content">
+            <!-- Flèche de retour en haut à gauche -->
+            <a href="galerie.html" class="back-arrow">&#8592;</a> <!-- Flèche de retour -->
+
+            <!-- Carré au centre avec image et flèches -->
+            <div class="image-viewer">
+                <div class="nav-arrow left" onclick="prevImage()">&#9664;</div> <!-- Flèche gauche -->
+                <img src="cosplayeurs.png" alt="Image Bonus" id="current-image">
+                <div class="nav-arrow right" onclick="nextImage()">&#9654;</div> <!-- Flèche droite -->
+            </div>
+
+            <!-- Légende de l'image -->
+            <div id="image-caption" class="image-caption">Légende de l'image</div>
+        </div>
+
+        <!-- Section inférieure avec bouton Home -->
+        <div class="screen-bottom">
+            <a href="index.html" class="home-button-link">
+                <div class="home-button"></div>
+            </a>
+        </div>
+    </div>
+
+    <!-- Script JavaScript -->
+    <script>
+        // Liste des images et légendes associées
+        const images = [
+         { src: "bonus.jpg", caption: "Bonus" },
+
+        { src: "a.jpg", caption: "Neytiri, Avatar, cosplayeur.se anonyme" },
+        { src: "b.jpg", caption: "Princess Peach, Nintedo, cosplayeur.se anonyme" },
+        { src: "c.jpg", caption: "Soldat, Toy Story, cosplayeur.se anonyme" },
+        { src: "d.jpg", caption: "Voldemort, Harry Potter, cosplayeur.se anonyme" },  
+        { src: "e.jpg", caption: "Docteur Fatalis, Quatre fantastiques, cosplayeur.se anonyme" },
+        { src: "f.jpg", caption: "Rebelle, cosplayeur.se anonyme" },
+        { src: "g.jpg", caption: "Team Rocket, Pokemon, cosplayeurs.ses anonymes" },
+        { src: "h.jpg", caption: "Karlach, Baldur's Gate 3, cosplayeur.se anonyme" },
+        { src: "i.jpg", caption: "Lara Croft, Tomb rider, cosplayeur.se anonyme " },
+         { src: "z.jpg", caption: "Tars, Interstellar, cosplayeur.se anonyme" },
+        { src: "y.jpg", caption: "Ryuk x Blanche neige, Death Note et Blanche neige et les septs nains, cosplayeur.se anonyme" },
+
+            
+       
+            
+           
+     
+
+
+       
+           
+       
+           
+        ];
+
+        let currentIndex = 0;
+
+        // Fonction pour afficher l'image précédente
+        function prevImage() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length; // Boucle vers la dernière image si on recule depuis la première
+            updateImage();
+        }
+
+        // Fonction pour afficher l'image suivante
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % images.length; // Boucle vers la première image si on avance depuis la dernière
+            updateImage();
+        }
+
+        // Fonction pour mettre à jour l'image et la légende
+        function updateImage() {
+            document.getElementById("current-image").src = images[currentIndex].src;
+            document.getElementById("image-caption").textContent = images[currentIndex].caption;
+        }
+
+        // Initialiser l'image et la légende au chargement
+        updateImage();
+    </script>
+</body>
+</html>

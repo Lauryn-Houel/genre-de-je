@@ -133,5 +133,10 @@ a {
     text-decoration: none;
     color: inherit; 
 }
+.notes {
+    font-size: 0.8em; /* Taille plus petite */
+    line-height: 1.2; /* Ajustement de l'espacement */
+    color: #555; /* Optionnel : couleur plus douce */
+}
 
 
